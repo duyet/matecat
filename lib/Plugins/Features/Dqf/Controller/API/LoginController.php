@@ -17,8 +17,8 @@ class LoginController extends KleinController {
 
     public function login() {
         // TODO: these should be passed as params
-        $username = 'fabrizio@translated.net';
-        $password = 'fabrizio@translated.net';
+        $username = '--fabrizio@translated.net';
+        $password = '--fabrizio@translated.net';
 
         $session = new Session($username, $password) ;
         $session->login();

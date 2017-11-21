@@ -23,7 +23,7 @@ class OutsourceTo_TranslatedSuccessController extends OutsourceTo_AbstractSucces
      * @see OutsourceTo_AbstractSuccessController::$review_order_page
      * @var string
      */
-    protected $review_order_page = 'https://signin.translated.net/review.php';
+    protected $review_order_page = '';
 
     /**
      * Token key name for the authentication return

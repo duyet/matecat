@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+/*
+ * jQuery File Upload Plugin Demo 6.9.1
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschant
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+-->
+<html lang=en>
+<head>
+    <!-- Force latest IE rendering engine or ChromeFrame if installed -->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta charset=utf-8>
+    <title>Translate a file with Matecat</title>
+    
+
+    <meta name=description content="Matecat allows you to get more matches than any other CAT tool.">
+    <meta name=viewport content="width=device-width">
+    <meta property=og:title content="Translate a file with MateCat">
+    <meta property=og:description content="Matecat is a free, online and open source software that gives you more matches than any other CAT tool. Use it now!">
+    <meta property=og:url content=https://www.matecat.com>
+    <meta property=og:image content=https://www.matecat.com/public/img/fbimg.jpg>
+
+    <link rel=stylesheet href="/public/css/build/upload-build.css?build=2.0.2b">
+    
+
+
+
+    <!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script type=text/javascript src="/public/js/build/libs_upload.js?build=2.0.2b"></script>
+    <script type=text/javascript src="/public/js/build/common.js?build=2.0.2b"></script>
+    <script type=text/javascript src="/public/js/build/upload.js"></script>
+    <script type=text/javascript src="/public/js/build/react.js?build=2.0.2b"></script>
+    <script type=text/javascript src="/public/js/build/cat-react.js?build=2.0.2b"></script>
+
+    <div>
+    <!-- insert tracking codes macro here which need to be loaded in header for all files -->
+</div>
+
+    <script type=text/javascript>
+        /**/
+        var config = {
+            basepath: '/',
+            hostpath: 'http://matecat',
+            unsupportedFileTypes: '[{"format":"fm","message":"Try converting to MIF"},{"format":"indd","message":"Try converting to INX"}]',
+            allowedFileTypes: /(\.|\/)(doc|dot|docx|docm|dotx|dotm|rtf|odt|ott|pdf|txt|xls|xlt|xlsx|xlsm|xltx|xltm|ods|ots|tsv|ppt|pps|pot|pptx|pptm|ppsx|ppsm|potx|potm|odp|otp|xml|zip|htm|html|xhtml|xml|dtd|json|yaml|yml|pdf|bmp|png|gif|jpeg|tiff|xliff|sdlxliff|tmx|ttx|xlf|mif|idml|icml|xml|dita|properties|resx|xml|sxml|txml|dita|Android xml|strings|srt|wix|po|g|ts)$/i,
+            conversionEnabled: 1,
+            analysisEnabled: 1,
+            maxFileSize: 104857600,
+            maxTMXFileSize: 104857600,
+            maxNumberFiles: 150,
+            ownerIsMe: true,
+            blueimp_dataType: 'json',
+            defaults : {
+                tag_projection : true,
+                speech2text : false,
+                lexiqa : false
+            },
+            lexiqa_languages: [],
+            tag_projection_languages: {"en-de":"English - German","en-es":"English - Spanish","en-fr":"English - French","en-it":"English - Italian","en-pt":"English - Portuguese","en-ru":"English - Russian","en-cs":"English - Czech","en-nl":"English - Dutch","en-fi":"English - Finnish","en-pl":"English - Polish","en-da":"English - Danish","en-sv":"English - Swedish","en-el":"English - Greek","en-hu":"English - Hungarian","en-lt":"English - Lithuanian","en-ja":"English - Japanese","en-et":"English - Estonian","en-sk":"English - Slovak","de-it":"German - Italian","de-fr":"German - French","fr-it":"French - Italian","fr-nl":"French - Dutch","it-es":"Italian - Spanish","nl-fi":"Dutch - Finnish","da-sv":"Danish - Swedish","nl-pt":"Dutch - Portuguese","zh-en":"Chinese - English","cs-de":"Czech - German"},
+            languages_array : [{"code":"af-ZA","name":"Afrikaans","top":"","direction":"ltr"},{"code":"sq-AL","name":"Albanian","top":"","direction":"ltr"},{"code":"am-AM","name":"Amharic","top":"","direction":"ltr"},{"code":"ar-SA","name":"Arabic","top":"top10 top20","direction":"rtl"},{"code":"an-ES","name":"Aragonese","top":"","direction":"ltr"},{"code":"hy-AM","name":"Armenian","top":"","direction":"ltr"},{"code":"ast-ES","name":"Asturian","top":"","direction":"ltr"},{"code":"az-AZ","name":"Azerbaijani","top":"","direction":"ltr"},{"code":"ba-RU","name":"Bashkir","top":"","direction":"ltr"},{"code":"eu-ES","name":"Basque","top":"","direction":"ltr"},{"code":"bn-IN","name":"Bengali","top":"","direction":"ltr"},{"code":"be-BY","name":"Belarusian","top":"","direction":"ltr"},{"code":"fr-BE","name":"Belgian French","top":"","direction":"ltr"},{"code":"bs-BA","name":"Bosnian","top":"","direction":"ltr"},{"code":"br-FR","name":"Breton","top":"","direction":"ltr"},{"code":"bg-BG","name":"Bulgarian","top":"","direction":"ltr"},{"code":"my-MM","name":"Burmese","top":"","direction":"ltr"},{"code":"ca-ES","name":"Catalan","top":"","direction":"ltr"},{"code":"cav-ES","name":"Catalan Valencian","top":"","direction":"ltr"},{"code":"cb-PH","name":"Cebuano","top":"","direction":"ltr"},{"code":"zh-CN","name":"Chinese Simplified","top":"top10 top20","direction":"ltr"},{"code":"zh-TW","name":"Chinese Traditional","top":"top20","direction":"ltr"},{"code":"hr-HR","name":"Croatian","top":"","direction":"ltr"},{"code":"cs-CZ","name":"Czech","top":"","direction":"ltr"},{"code":"da-DK","name":"Danish","top":"top20","direction":"ltr"},{"code":"fa-PRS","name":"Dari","top":"","direction":"rtl"},{"code":"nl-NL","name":"Dutch","top":"top10 top20","direction":"ltr"},{"code":"en-GB","name":"English","top":"top5 top10 top20","direction":"ltr"},{"code":"en-US","name":"English US","top":"","direction":"ltr"},{"code":"eo-XN","name":"Esperanto","top":"","direction":"ltr"},{"code":"et-EE","name":"Estonian","top":"","direction":"ltr"},{"code":"fo-FO","name":"Faroese","top":"","direction":"ltr"},{"code":"ff-FUL","name":"Fula","top":"","direction":"ltr"},{"code":"fi-FI","name":"Finnish","top":"top20","direction":"ltr"},{"code":"nl-BE","name":"Flemish","top":"","direction":"ltr"},{"code":"fr-FR","name":"French","top":"top5 top10 top20","direction":"ltr"},{"code":"fr-CA","name":"French Canada","top":"","direction":"ltr"},{"code":"gl-ES","name":"Galician","top":"","direction":"ltr"},{"code":"ka-GE","name":"Georgian","top":"","direction":"ltr"},{"code":"de-DE","name":"German","top":"top5 top10 top20","direction":"ltr"},{"code":"el-GR","name":"Greek","top":"","direction":"ltr"},{"code":"gu-IN","name":"Gujarati","top":"","direction":"ltr"},{"code":"ht-HT","name":"Haitian Creole French","top":"","direction":"ltr"},{"code":"ha-HAU","name":"Hausa","top":"","direction":"rtl"},{"code":"US-HI","name":"Hawaiian","top":"","direction":"ltr"},{"code":"he-IL","name":"Hebrew","top":"","direction":"rtl"},{"code":"mrj-RU","name":"Hill Mari","top":"","direction":"ltr"},{"code":"hi-IN","name":"Hindi","top":"","direction":"ltr"},{"code":"hu-HU","name":"Hungarian","top":"","direction":"ltr"},{"code":"is-IS","name":"Icelandic","top":"","direction":"ltr"},{"code":"id-ID","name":"Indonesian","top":"","direction":"ltr"},{"code":"ga-IE","name":"Irish Gaelic","top":"","direction":"ltr"},{"code":"it-IT","name":"Italian","top":"top5 top10 top20","direction":"ltr"},{"code":"ja-JP","name":"Japanese","top":"top10 top20","direction":"ltr"},{"code":"jv-ID","name":"Javanese","top":"","direction":"rtl"},{"code":"kn-IN","name":"Kannada","top":"","direction":"ltr"},{"code":"kr-KAU","name":"Kanuri","top":"","direction":"rtl"},{"code":"kk-KZ","name":"Kazakh","top":"","direction":"ltr"},{"code":"km-KH","name":"Khmer","top":"","direction":"ltr"},{"code":"rw-KIN","name":"Kinyarwanda","top":"","direction":"ltr"},{"code":"ko-KR","name":"Korean","top":"","direction":"ltr"},{"code":"ku-KMR","name":"Kurdish Kurmanji","top":"","direction":"ltr"},{"code":"ku-CKB","name":"Kurdish Sorani","top":"","direction":"rtl"},{"code":"ky-KG","name":"Kyrgyz","top":"","direction":"ltr"},{"code":"lo-LA","name":"Lao","top":"","direction":"ltr"},{"code":"la-XN","name":"Latin","top":"","direction":"ltr"},{"code":"lv-LV","name":"Latvian","top":"","direction":"ltr"},{"code":"ln-LIN","name":"Lingala","top":"","direction":"ltr"},{"code":"lt-LT","name":"Lithuanian","top":"","direction":"ltr"},{"code":"lb-LU","name":"Luxembourgish","top":"","direction":"ltr"},{"code":"mk-MK","name":"Macedonian","top":"","direction":"ltr"},{"code":"mg-MLG","name":"Malagasy","top":"","direction":"ltr"},{"code":"ms-MY","name":"Malay","top":"","direction":"ltr"},{"code":"ml-IN","name":"Malayalam","top":"","direction":"ltr"},{"code":"mt-MT","name":"Maltese","top":"","direction":"ltr"},{"code":"mhr-RU","name":"Mari","top":"","direction":"ltr"},{"code":"mi-NZ","name":"Maori","top":"","direction":"ltr"},{"code":"mr-IN","name":"Marathi","top":"","direction":"ltr"},{"code":"mn-MN","name":"Mongolian","top":"","direction":"ltr"},{"code":"sr-ME","name":"Montenegrin","top":"","direction":"ltr"},{"code":"nr-ZA","name":"Ndebele","top":"","direction":"ltr"},{"code":"ne-NP","name":"Nepali","top":"","direction":"ltr"},{"code":"nb-NO","name":"Norwegian Bokm\u00e5l","top":"top20","direction":"ltr"},{"code":"nn-NO","name":"Norwegian Nynorsk","top":"top20","direction":"ltr"},{"code":"ny-NYA","name":"Nyanja","top":"","direction":"ltr"},{"code":"oc-FR","name":"Occitan","top":"","direction":"ltr"},{"code":"oc-ES","name":"Occitan Aran","top":"","direction":"ltr"},{"code":"pa-IN","name":"Punjabi","top":"","direction":"ltr"},{"code":"pap-CW","name":"Papiamentu","top":"","direction":"ltr"},{"code":"ps-PK","name":"Pashto","top":"","direction":"rtl"},{"code":"fa-IR","name":"Persian","top":"","direction":"rtl"},{"code":"pl-PL","name":"Polish","top":"top20","direction":"ltr"},{"code":"pt-PT","name":"Portuguese","top":"top10 top20","direction":"ltr"},{"code":"pt-BR","name":"Portuguese Brazil","top":"top20","direction":"ltr"},{"code":"qu-XN","name":"Quechua","top":"","direction":"ltr"},{"code":"rhg-MM","name":"Rohingya","top":"","direction":"rtl"},{"code":"ro-RO","name":"Romanian","top":"","direction":"ltr"},{"code":"ru-RU","name":"Russian","top":"top20","direction":"ltr"},{"code":"gd-GB","name":"Scots Gaelic","top":"","direction":"ltr"},{"code":"sr-Latn-RS","name":"Serbian Latin","top":"","direction":"ltr"},{"code":"sr-Cyrl-RS","name":"Serbian Cyrillic","top":"","direction":"ltr"},{"code":"nso-ZA","name":"Sesotho","top":"","direction":"ltr"},{"code":"tn-ZA","name":"Setswana (South Africa)","top":"","direction":"ltr"},{"code":"si-LK","name":"Sinhala","top":"","direction":"ltr"},{"code":"sk-SK","name":"Slovak","top":"","direction":"ltr"},{"code":"sl-SI","name":"Slovenian","top":"","direction":"ltr"},{"code":"so-SO","name":"Somali","top":"","direction":"ltr"},{"code":"es-ES","name":"Spanish","top":"top5 top10 top20","direction":"ltr"},{"code":"es-MX","name":"Spanish Latin America","top":"top20","direction":"ltr"},{"code":"es-CO","name":"Spanish Colombia","top":"top20","direction":"ltr"},{"code":"su-ID","name":"Sundanese","top":"","direction":"ltr"},{"code":"sw-SZ","name":"Swahili","top":"","direction":"ltr"},{"code":"sv-SE","name":"Swedish","top":"top20","direction":"ltr"},{"code":"de-CH","name":"Swiss German","top":"","direction":"ltr"},{"code":"syc-TR","name":"Syriac (Aramaic)","top":"","direction":"rtl"},{"code":"tl-PH","name":"Tagalog","top":"","direction":"ltr"},{"code":"tg-TJ","name":"Tajik","top":"","direction":"ltr"},{"code":"tmh-DZ","name":"Tamashek (Tuareg)","top":"","direction":"rtl"},{"code":"ta-IN","name":"Tamil","top":"","direction":"ltr"},{"code":"te-IN","name":"Telugu","top":"","direction":"ltr"},{"code":"tt-RU","name":"Tatar","top":"","direction":"ltr"},{"code":"th-TH","name":"Thai","top":"","direction":"ltr"},{"code":"ti-TIR","name":"Tigrinya","top":"","direction":"ltr"},{"code":"ts-ZA","name":"Tsonga","top":"","direction":"ltr"},{"code":"tr-TR","name":"Turkish","top":"","direction":"ltr"},{"code":"tk-TM","name":"Turkmen","top":"","direction":"ltr"},{"code":"udm-RU","name":"Udmurt","top":"","direction":"ltr"},{"code":"uk-UA","name":"Ukrainian","top":"","direction":"ltr"},{"code":"ur-PK","name":"Urdu","top":"","direction":"rtl"},{"code":"uz-UZ","name":"Uzbek","top":"","direction":"ltr"},{"code":"vi-VN","name":"Vietnamese","top":"","direction":"ltr"},{"code":"cy-GB","name":"Welsh","top":"","direction":"ltr"},{"code":"xh-ZA","name":"Xhosa","top":"","direction":"ltr"},{"code":"yi-YD","name":"Yiddish","top":"","direction":"rtl"},{"code":"yo-NG","name":"Yoruba","top":"","direction":"ltr"},{"code":"zu-ZA","name":"Zulu","top":"","direction":"ltr"}],
+            private_keys: [],
+            currentTargetLang: 'en-US',
+            currentSourceLang: 'fr-FR'
+        };
+        /**/
+    </script>
+
+    <div>
+
+</div>
+
+</head>
+
+
+<body>
+<div class="iepopup nobrowser">
+    <style type=text/css>
+       .nobrowser {display:block!important}
+    </style>
+    <a href="/" class=logoblack></a>
+
+    <div class=titleie>
+        <h1>Welcome to MateCat!</h1>
+        <h2>There are 2 options for you</h2>
+    </div>
+    <div class="col-2 pull-left col-a">
+        <h3>1 - Use the tool by visiting MateCat.com from your desktop</h3>
+        <p>MateCat works great with the following browsers</p>
+        <ul>
+
+            
+                <li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank"><img src=/public/img/chrome.jpg width=140><br>
+                    Chrome</a></li>
+            
+
+            
+
+        </ul>
+    </div>
+    <div class="col-2 pull-left col-b">
+        <h3>2 - Learn more about MateCat</h3>
+        <br>
+        <p>       
+<a class=button-learn-2 href="https://www.matecat.com/benefits/"><img src="/public/img/master_matecat.png">Visit the website</a></p>
+    </div>
+</div>
+</body>
+
+
+
+</html>

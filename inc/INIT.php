@@ -176,7 +176,7 @@ class INIT {
      * In short: please turn it off only if strictly necessary :)
      * @var bool
      */
-    public static $ENABLE_OUTSOURCE = true;
+    public static $ENABLE_OUTSOURCE = false;
 
     /**
      * MateCat Filters configuration
