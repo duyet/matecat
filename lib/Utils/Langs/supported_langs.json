@@ -1,5 +1,15 @@
 {
     "langs": [
+       {
+               "localized":[{
+	                "en":"Samoan"
+	             }],
+                 "isocode":"sm",
+            "enabled":true,
+            "rtl":false,
+            "rfc3066code":"sm-WS"
+        }
+    ,	
         {
             "localized":[{
                 "en":"Afrikaans"
